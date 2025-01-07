@@ -9,9 +9,16 @@ body{
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
+  /*sticky header*/
+  text-align: left;
+  position: relative;
   /*width: 100%;*/
 }
-
+th {
+  background: white;
+  position: sticky;
+  top: 0;
+}
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
@@ -27,7 +34,8 @@ tr:hover {background-color: #D6EEEE;}
 
 p {
 	font-weight:bold; 
-	font-size: 20px
+	font-size: 20px;
+	color: blue;
 }
 img:hover{
     color: #424242; 
@@ -42,12 +50,76 @@ img:hover{
   -webkit-transform: scale(1.60); /* Safari and Chrome */
 
 }
+.small{
+	width:220px;height:240px;
+}
+
+.large{
+	width:320px;height:340px;
+}
+
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    /*margin-bottom: 1em;*/
+    padding: 5px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+
+
+#myBtn {
+  
+  background-color: blue; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 5px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 12px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
 </style>
+<script>
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+
 </head>
 <body>
 
 <h1>Repair List</h1>
-<p>Outside of the house and Garage</p>
+<div id="toc_container">
+<p class="toc_title" style="color:#000">Contents</p>
+<ul class="toc_list">
+	<li><a href="#First_Point_Header">Outside of the house and Garage</a></li>
+	<li><a href="#Second_Point_Header">Master Room</a></li>
+	<li><a href="#Third_Point_Header">Kitchen</a></li>
+	<li><a href="#Fourth_Point_Header">Dining and Living Room</a></li>
+	<li><a href="#Fifth_Point_Header">Stairs</a></li>
+	<li><a href="#Sixth_Point_Header">Second Family Room (Loft) and Hallway</a></li>
+	<li><a href="#Seven_Point_Header">4 bedrooms and Laundry room</a></li>
+</ul>
+</div>
+
+<p id="First_Point_Header">Outside of the house and Garage</p>
 <table>
   <tr>
     <th>Location</th>
@@ -68,7 +140,7 @@ Your browser does not support the video tag.
   <tr>
     <td>Front outside Door</td>
     <td>The door frame by the glass is white, it should be painted red.</td>
-    <td><img src="images/OutsideDoorFrame.jpg" alt="Front Door" style="width:220px;height:240px;"></td>
+    <td><img src="images/OutsideDoorFrame.jpg" alt="Front Door" class="small"></td>
 	<td>N</td>
   </tr>
   <tr>
@@ -121,7 +193,7 @@ Your browser does not support the video tag.
 <br/><br/>
 
  
-<p>Master Room</p>
+<p id="Second_Point_Header">Master Room&nbsp;&nbsp;<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button></p>
 <table>
   <tr>
     <th>Location</th>
@@ -202,7 +274,7 @@ Your browser does not support the video tag.</td>
 <br/><br/>
 
   
-<p>Kitchen</p>
+<p id="Third_Point_Header">Kitchen&nbsp;&nbsp;<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button></p>
 <table>
   <tr>
     <th>Location</th>
@@ -229,6 +301,12 @@ Your browser does not support the video tag.
     <td>Kitchen Island</td>
     <td>The kitchen island near the refrigerator shows a score.</td>
     <td><img src="images/IslandCounterTop2.jpg" alt="Island Counter Top" style="width:220px;height:240px;"></td>
+	<td>N</td>
+  </tr>
+    <tr>
+    <td>Kitchen Island</td>
+    <td>The kitchen island near the living room shows 2 scratch/chip on the edge and not a smooth finish along the edge.</td>
+    <td><img src="images/CounterChip1.jpg" alt="Counter Chip 1" style="width:220px;height:240px;"><br/><img src="images/CounterChip2.jpg" alt="Counter Chip 2" style="width:220px;height:240px;"></td>
 	<td>N</td>
   </tr>
   <tr>
@@ -272,7 +350,7 @@ Your browser does not support the video tag.
 <br/><br/>
 
 
-<p>Dining and Living Room</p>
+<p id="Fourth_Point_Header">Dining and Living Room&nbsp;&nbsp;<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button></p>
 <table>
   <tr>
     <th>Location</th>
@@ -326,7 +404,7 @@ Your browser does not support the video tag.
 <br/><br/>
 
 
-<p>Stairs</p>
+<p id="Fifth_Point_Header">Stairs&nbsp;&nbsp;<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button></p>
 <table>
   <tr>
     <th>Location</th>
@@ -386,7 +464,7 @@ Your browser does not support the video tag.
 <br/><br/>
 
 
-<p>Second Family Room (Loft) and Hallway</p>
+<p id="Sixth_Point_Header">Second Family Room (Loft) and Hallway&nbsp;&nbsp;<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button></p>
 <table>
   <tr>
     <th>Location</th>
@@ -410,7 +488,7 @@ Your browser does not support the video tag.
 <br/><br/>
 
 
-<p>4 bedrooms and Laundry room</p>
+<p id="Seven_Point_Header">4 bedrooms and Laundry room&nbsp;&nbsp;<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button></p>
 <table> 
  <tr>
     <td>The Jack and Jill room facing the backyard</td>
@@ -455,6 +533,7 @@ Your browser does not support the video tag.
 	<td>N</td>
   </tr>
 </table> 
+
 </body>
 </html>
 
